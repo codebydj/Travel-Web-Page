@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link
+      rel="shortcut icon"
+      href="https://i.ibb.co/QC2bSGJ/travel-logo-design.jpg"
+      type="image/x-icon" />
+    <link rel="stylesheet" href="menuFooter.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: poppins;
+      }
+      .section1Menu > a {
+        border-radius: 5px;
+      }
+      .section1Menu > a:hover {
+        color: white;
+        background-color: #478ac9;
+        transition: 0.2s linear;
+      }
+      #about-section {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 12%;
+      }
+      .about-left img {
+        width: 300px;
+        height: auto;
+        transform: translateY(50px);
+      }
+      .about-right {
+        width: 54%;
+      }
+
+      .about-right ul li {
+        display: flex;
+        align-items: center;
+      }
+
+      .about-right h1 {
+        color: lightskyblue;
+        font-size: 37px;
+        margin-bottom: 5px;
+      }
+
+      .about-right p {
+        color: #444;
+        line-height: 26px;
+        font-size: 15px;
+      }
+
+      .about-right > p::first-letter {
+        font-size: 20px;
+        padding-left: 30px;
+      }
+
+      .about-right .address {
+        margin: 25px 0;
+      }
+
+      .about-right .address ul li {
+        margin-bottom: 5px;
+      }
+
+      .address .address-logo {
+        margin-right: 15px;
+        color: lightskyblue;
+      }
+
+      .address .separate {
+        margin: 0 35px;
+        text-wrap: wrap;
+      }
+
+      .about-right .expertise ul {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .expertise h3 {
+        margin-bottom: 10px;
+      }
+
+      .expertise .expertise-logo {
+        font-size: 19px;
+        margin-right: 10px;
+        color: lightskyblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="section section1 showAnimate" id="section1Top">
+      <div class="section1_In section1A">
+        <div class="section1A_In section1Logo">
+          <img
+            src="https://i.ibb.co/QC2bSGJ/travel-logo-design.jpg"
+            alt="travel-logo-design"
+            border="0"
+            draggable="false" />
+        </div>
+        <div class="section1A_In section1Menu" id="Menu1">
+          <a href="index.html">home</a>
+          <a href="packages.html">package</a>
+          <a href="hotels.html">hotels</a>
+          <a href="gallery.html">gallery</a>
+          <a href="contactUs.html">contact us</a>
+          <a href="AboutUs.html">about us</a>
+        </div>
+      </div>
+      <div class="menu-toggle" id="Menu2">
+        <img
+          src="https://i.ibb.co/f0qdNB1/134216-menu-lines-hamburger-icon.png"
+          alt="134216-menu-lines-hamburger-icon"
+          border="0"
+          id="menuToggleImg"
+          onclick="toggleVisibility()" />
+        <div class="menuList listHidden" id="toggleElement">
+          <a href="index.html">home</a>
+          <a href="packages.html">package</a>
+          <a href="hotels.html">hotels</a>
+          <a href="gallery.html">gallery</a>
+          <a href="contactUs.html">contact us</a>
+          <a href="AboutUs.html">about us</a>
+        </div>
+      </div>
+    </section>
+    <section id="about-section">
+      <!-- about left  -->
+      <div class="about-left">
+        <img
+          src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png"
+          alt="About Img" />
+      </div>
+
+      <!-- about right  -->
+      <div class="about-right">
+        <h1>About Me</h1>
+        <p>
+          At EasyTripWay.com, we believe that travel is not just about visiting
+          new places; it's about creating unforgettable memories, forging
+          connections, and enriching our lives through unique experiences. we
+          are dedicated to curating extraordinary journeys tailored to your
+          preferences, whether you're seeking adventure, relaxation, cultural
+          immersion, or a blend of everything. Our team of passionate travel
+          experts is committed to providing personalized service every step of
+          the way, from helping you choose the perfect destination to ensuring
+          every detail of your trip exceeds your expectations. As avid travelers
+          ourselves, we understand the transformation power of exploring the
+          world and strive to share our expertise and enthusiasm with you, our
+          valued travelers. Join us on a journey of discovery, adventure, and
+          unparalleled experiences. Let's explore the world together!
+        </p>
+        <div class="address">
+          <ul>
+            <li>
+              <span class="address-logo">
+                <i class="fas fa-paper-plane"></i>
+              </span>
+              <p>Address</p>
+              <span class="separate">:</span>
+              <p>Dharmavaram,Sri sathya sai, Andhra Pradesh, India</p>
+            </li>
+            <li>
+              <span class="address-logo">
+                <i class="fas fa-phone-alt"></i>
+              </span>
+              <p>Phone No</p>
+              <span class="separate">:</span>
+              <p>+91 7569099290</p>
+            </li>
+            <li>
+              <span class="address-logo">
+                <i class="far fa-envelope"></i>
+              </span>
+              <p>Email ID</p>
+              <span class="separate">:</span>
+              <p>jayad6889@gmail.com</p>
+            </li>
+          </ul>
+        </div>
+        <div class="expertise">
+          <h3>My Expertise</h3>
+          <ul>
+            <li>
+              <span class="expertise-logo">
+                <i class="fab fa-html5"></i>
+              </span>
+              <p>HTML</p>
+            </li>
+            <li>
+              <span class="expertise-logo">
+                <i class="fab fa-css3-alt"></i>
+              </span>
+              <p>CSS</p>
+            </li>
+            <li>
+              <span class="expertise-logo">
+                <i class="fab fa-node-js"></i>
+              </span>
+              <p>Java Script</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section8">
+      <a href="#section1Top"> <div class="section8GotoTop">GoTo Top</div></a>
+      <div class="section8_In">
+        <div class="section8Content">
+          "Connect with us on social media for exclusive travel tips, deals, and
+          inspiration! Follow us on Facebook, Instagram, and Twitter. Join our
+          newsletter to stay updated on the latest travel trends and destination
+          highlights. Let's make memories together!"
+        </div>
+        <div class="section8FooterLinks">
+          <div class="section8FooterLinks1">
+            "Explore, Dream, Discover - Your Adventure Awaits! © 2024
+            EasyTripWay. All rights reserved".
+          </div>
+          <div class="section8FooterLinks2">
+            Terms of Service | Privacy Policy |
+            <a href="contactUs.html">Contact Us</a>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="toggle.js"></script>
+  </body>
+</html>

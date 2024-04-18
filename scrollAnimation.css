@@ -1,0 +1,121 @@
+/* section1 */
+.section1 > .section1_In > .section1B_In > .svg1 {
+  transform: translateX(-500px);
+  visibility: hidden;
+}
+.section1.showAnimate > .section1_In > .section1B_In > .svg1 {
+  transform: translateX(0px);
+  visibility: visible;
+  transition: 1.2s linear;
+}
+
+.section1 > .section1_In > .section1B_In > .section1BA_In > img {
+  transform: translate(300px, -200px);
+  visibility: hidden;
+}
+.section1.showAnimate > .section1_In > .section1B_In > .section1BA_In > img {
+  transform: translate(0);
+  visibility: visible;
+  transition: 1.2s linear;
+}
+
+/* section2 */
+.section2 > .section2A {
+  transform: translateY(-20px);
+}
+.section2.showAnimate > .section2A {
+  transform: translateY(0);
+  transition: 1.2s linear;
+}
+
+.section2 > .section2B {
+  transform: translateY(100px);
+}
+.section2.showAnimate > .section2B {
+  transform: translateY(0);
+  transition: 1.2s linear;
+}
+
+/* section3 */
+.section3 > .section3B > .section3BA > .section3BAA {
+  transform: translateX(300px);
+  visibility: hidden;
+}
+.section3.showAnimate > .section3B > .section3BA > .section3BAA {
+  transform: translateX(0);
+  visibility: visible;
+  transition: 1.2s linear;
+}
+
+.section3 > .section3B > .section3BA > .section3BAB {
+  transform: translateX(-300px);
+  visibility: hidden;
+}
+.section3.showAnimate > .section3B > .section3BA > .section3BAB {
+  transform: translateX(0);
+  visibility: visible;
+  transition: 1.2s linear;
+}
+
+/* section4 */
+.section4 > .section4A > .svg2 {
+  transform: translateX(-500px);
+  visibility: hidden;
+}
+.section4.showAnimate > .section4A > .svg2 {
+  transform: translateX(0);
+  visibility: visible;
+  transition: 1.2s linear;
+}
+
+.section4 > .section4B > .section4BB > img {
+  transform: translateX(400px);
+  visibility: hidden;
+}
+.section4.showAnimate > .section4B > .section4BB > img {
+  transform: translateX(0);
+  visibility: visible;
+  transition: 1.2s linear;
+}
+
+/* section6 */
+.section6 > .section6A  {
+  transform: translate(-300px, 200px);
+  visibility: hidden;
+}
+.section6.showAnimate > .section6A  {
+  transform: translate(0, 0);
+  visibility: visible;
+  transition: 1.2s linear;
+}
+
+.section6 > .section6B  > .section6BB {
+  transform: translate(300px, -200px);
+  visibility: hidden;
+}
+.section6.showAnimate > .section6B > .section6BB {
+  transform: translate(0, 0);
+  visibility: visible;
+  transition: 1.2s linear;
+}
+
+/* section7 */
+.section7 > .section7B > .section7BA > .section7BA_In {
+  transform: rotateY(180deg);
+  visibility: hidden;
+}
+.section7.showAnimate > .section7B > .section7BA > .section7BA_In {
+  transform: rotateY(0deg);
+  visibility: visible;
+  transition: 0.6s linear;
+}
+
+.section7 > .section7B > .section7BB > .section7BA_In {
+  transform: rotateY(180deg);
+  visibility: hidden;
+}
+.section7.showAnimate > .section7B > .section7BB > .section7BA_In {
+  transform: rotateY(0deg);
+  visibility: visible;
+  transition: 0.6s linear;
+}

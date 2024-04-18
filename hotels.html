@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotels</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="https://i.ibb.co/QC2bSGJ/travel-logo-design.jpg"
+      type="image/x-icon" />
+    <link rel="stylesheet" href="menuFooter.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(239, 239, 239);
+      }
+      .section1Menu > a {
+        border-radius: 5px;
+      }
+      .section1Menu > a:hover {
+        color: white;
+        background-color: #478ac9;
+        transition: 0.2s linear;
+      }
+      .hotelsSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 20px;
+      }
+      .hotelsSectionHeader {
+        font-size: 3em;
+        font-family: "Noto Serif JP", serif;
+        font-weight: 600;
+      }
+      .hotelsSectionBody {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+      }
+      .hotelsSectionBodyContentBox {
+        background-color: #ffff;
+        padding: 20px;
+        width: 90vw;
+        height: 300px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        box-shadow: 0 26px 58px 0 rgba(0, 0, 0, 0.22),
+          0 5px 14px 0 rgba(0, 0, 0, 0.18);
+      }
+      .hotelsSectionBodyContentBox:hover {
+        transform: scale(1.01);
+      }
+      .hotelsImgBox {
+        width: 25vw;
+        border: 1px solid #000;
+        display: flex;
+        gap: 10px;
+        overflow: hidden;
+        border-radius: 5px;
+      }
+      .hotelsImgBox > img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease-in-out;
+      }
+      /* .hotelsImgBox:hover img {
+        transform: translateX(-100%);
+      } */
+      .hotelsDetails {
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      .hotelsDetailsHeader {
+        font-size: 1.4em;
+        font-weight: bold;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        text-transform: capitalize;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      ul > li {
+        font-size: 0.9em;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .hotelsOffers {
+        width: 10%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: space-evenly;
+      }
+      .hotelsOffersBox1 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .hotelsOffersPrice {
+        font-size: 2.2em;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .hotelsOffersPrice::before {
+        content: "₹";
+      }
+      .hotelsOffersRating {
+        display: flex;
+        position: relative;
+        left: -20px;
+      }
+      .hotelsOffersRating > img {
+        width: 25%;
+        background-blend-mode: color-burn;
+      }
+      .hotelsOffersLastUpdated {
+        font-size: 0.61em;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .hotelsOffersBox2 > button {
+        width: 150px;
+        height: 50px;
+        position: relative;
+        left: -20px;
+        font-size: 1.12em;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        border-radius: 8px;
+        border: none;
+        background-color: aqua;
+        cursor: pointer;
+      }
+    </style>
+
+    <!-- for responsive -->
+    <style>
+      @media (max-width: 800px) {
+        .hotelsImgBox {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 400px;
+        }
+        .hotelsSectionBodyContentBox {
+          justify-content: center;
+          gap: 35px;
+          height: fit-content;
+          width: fit-content;
+          border: 1px solid #737373;
+        }
+        .hotelsOffers {
+          justify-content: center;
+          gap: 40px;
+        }
+        .hotelsDetails {
+          width: 20vw;
+          gap: 20px;
+        }
+        .hotelsDetailsHeader {
+          font-size: 0.9em;
+        }
+        ul > li {
+          font-size: 0.5em;
+        }
+        .hotelsOffersPrice {
+          font-size: 1.2em;
+        }
+        .hotelsOffersRating {
+          left: 0px;
+        }
+        .hotelsOffersBox2 > button {
+          width: 60px;
+          height: 30px;
+          font-size: 0.71em;
+          left: 0%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="section section1 showAnimate" id="section1Top">
+      <div class="section1_In section1A">
+        <div class="section1A_In section1Logo">
+          <img
+            src="https://i.ibb.co/QC2bSGJ/travel-logo-design.jpg"
+            alt="travel-logo-design"
+            border="0"
+            draggable="false" />
+        </div>
+        <div class="section1A_In section1Menu" id="Menu1">
+          <a href="index.html">home</a>
+          <a href="packages.html">package</a>
+          <a href="hotels.html">hotels</a>
+          <a href="gallery.html">gallery</a>
+          <a href="contactUs.html">contact us</a>
+          <a href="AboutUs.html">about us</a>
+        </div>
+      </div>
+      <div class="menu-toggle" id="Menu2">
+        <img
+          src="https://i.ibb.co/f0qdNB1/134216-menu-lines-hamburger-icon.png"
+          alt="134216-menu-lines-hamburger-icon"
+          border="0"
+          id="menuToggleImg"
+          onclick="toggleVisibility()" />
+        <div class="menuList listHidden" id="toggleElement">
+          <a href="index.html">home</a>
+          <a href="packages.html">package</a>
+          <a href="hotels.html">hotels</a>
+          <a href="gallery.html">gallery</a>
+          <a href="contactUs.html">contact us</a>
+          <a href="AboutUs.html">about us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hotelsSection">
+      <div class="hotelsSectionHeader">Hotels</div>
+      <div class="hotelsSectionBody">
+        <div class="hotelsSectionBodyContentBox hotelsSectionBodyContentBox1">
+          <div class="hotelsImgBox hotelsImgBox1">
+            <img
+              src="https://i.ibb.co/Cv7NYs2/machu-picchu.jpg"
+              alt="machu-picchu"
+              border="0" />
+          </div>
+          <div class="hotelsDetails">
+            <div class="hotelsDetailsHeader">Gringo Bill's Boutique Hotel</div>
+            <ul>
+              <li>
+                Located in Machu Picchu, less than 1 km from Machu Picchu Hot
+                Spring, Thais House Machupicchu features views of the river.
+              </li>
+              <li>
+                The accommodation provides a 24-hour front desk, airport
+                transfers, a shared kitchen and free WiFi throughout the
+                property.
+              </li>
+              <li>
+                At the hotel, rooms are fitted with a patio with
+                a mountain view.
+              </li>
+            </ul>
+          </div>
+          <div class="hotelsOffers">
+            <div class="hotelsOffersBox1">
+              <div class="hotelsOffersPrice">14999</div>
+              <div class="hotelsOffersRating">
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+              </div>
+              <div class="hotelsOffersLastUpdated">Last updated: 28 jul 23</div>
+            </div>
+            <div class="hotelsOffersBox2">
+              <button class="bookNow">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hotelsSectionBodyContentBox hotelsSectionBodyContentBox2">
+          <div class="hotelsImgBox">
+            <img
+              src="https://i.ibb.co/k4dzZ2y/grand-canyon.jpg"
+              alt="grand-canyon"
+              border="0" />
+          </div>
+          <div class="hotelsDetails">
+            <div class="hotelsDetailsHeader">The Grand Hotel</div>
+            <ul>
+              <li>
+                Featuring an indoor swimming pool, Drury Inn & Suites Flagstaff
+                is a 10-minutes drive from Flagstaff Pulliam Airport. Free Wi-Fi
+                is included in all rooms.
+              </li>
+              <li>
+                Each air-conditioned room features a flat-screen TV with cable
+                channels, a microwave and a small refrigerator. An en suite
+                bathroom with a hairdryer is also included.
+              </li>
+              <li>Breakfast is served daily at the hotel.</li>
+            </ul>
+          </div>
+          <div class="hotelsOffers">
+            <div class="hotelsOffersBox1">
+              <div class="hotelsOffersPrice">10999</div>
+              <div class="hotelsOffersRating">
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+              </div>
+              <div class="hotelsOffersLastUpdated">Last updated 20 apr 23</div>
+            </div>
+            <div class="hotelsOffersBox2">
+              <button class="bookNow">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hotelsSectionBodyContentBox hotelsSectionBodyContentBox3">
+          <div class="hotelsImgBox">
+            <img
+              src="https://i.ibb.co/7401fsh/iguazu-falls2.jpg"
+              alt="iguazu-falls2"
+              border="0" />
+          </div>
+          <div class="hotelsDetails">
+            <div class="hotelsDetailsHeader">The Grand Hotel iguazu-falls</div>
+            <ul>
+              <li>
+                Strategically located inside Iguazu National Park, Gran Meliá
+                Iguazú features an infinity pool and spa facilities. Has 3
+                restaurant, and 4 Bars.
+              </li>
+              <li>
+                Soberly decorated, rooms at Gran Meliá Iguazú feature large
+                private balconies.
+              </li>
+              <li>
+                Some of them overlook the waterfalls, and some others enjoy a
+                jungle view.
+              </li>
+            </ul>
+          </div>
+          <div class="hotelsOffers">
+            <div class="hotelsOffersBox1">
+              <div class="hotelsOffersPrice">8999</div>
+              <div class="hotelsOffersRating">
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+              </div>
+              <div class="hotelsOffersLastUpdated">Last updated 13 nov 23</div>
+            </div>
+            <div class="hotelsOffersBox2">
+              <button class="bookNow">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hotelsSectionBodyContentBox hotelsSectionBodyContentBox4">
+          <div class="hotelsImgBox">
+            <img
+              src="https://i.ibb.co/1ZFDBW5/inkaterra-machu-picchu.jpg"
+              alt="inkaterra-machu-picchu"
+              border="0" />
+          </div>
+          <div class="hotelsDetails">
+            <div class="hotelsDetailsHeader">Kyoto Century Hotel</div>
+            <ul>
+              <li>
+                Located a 10-minute taxi ride away from JR Kyoto Katsuragawa
+                Station
+              </li>
+              <li>
+                All rooms are air conditioned and equipped with a flat-screen TV
+              </li>
+              <li>
+                In addition, all rooms include a sitting area and a mountain
+                view from the property.
+              </li>
+            </ul>
+          </div>
+          <div class="hotelsOffers">
+            <div class="hotelsOffersBox1">
+              <div class="hotelsOffersPrice">11999</div>
+              <div class="hotelsOffersRating">
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+              </div>
+              <div class="hotelsOffersLastUpdated">Last updated 14 aug 23</div>
+            </div>
+            <div class="hotelsOffersBox2">
+              <button class="bookNow">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hotelsSectionBodyContentBox hotelsSectionBodyContentBox5">
+          <div class="hotelsImgBox">
+            <img
+              src="https://i.ibb.co/sgn1QGq/Marrakech1.jpg"
+              alt="Marrakech1"
+              border="0" />
+          </div>
+          <div class="hotelsDetails">
+            <div class="hotelsDetailsHeader">Savoy Le Grand Hotel</div>
+            <ul>
+              <li>Breakfast is served  at the hotel.</li>
+              <li>
+                The nearest airport is Marrakech-Menara, 4 km from the
+                accommodation, and the property offers a paid airport shuttle
+                service.
+              </li>
+              <li>
+                Both a bicycle rental service and a car rental service are
+                available at the riad.
+              </li>
+            </ul>
+          </div>
+          <div class="hotelsOffers">
+            <div class="hotelsOffersBox1">
+              <div class="hotelsOffersPrice">15999</div>
+              <div class="hotelsOffersRating">
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+              </div>
+              <div class="hotelsOffersLastUpdated">Last updated 16 jul</div>
+            </div>
+            <div class="hotelsOffersBox2">
+              <button class="bookNow">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hotelsSectionBodyContentBox hotelsSectionBodyContentBox6">
+          <div class="hotelsImgBox">
+            <img
+              src="https://i.ibb.co/fHYj6PK/safari-1.jpg"
+              alt="safari-1"
+              border="0" />
+          </div>
+          <div class="hotelsDetails">
+            <div class="hotelsDetailsHeader">
+              Hotel Krishna Deluxe-By RCG Hotels
+            </div>
+            <ul>
+              <li>
+                The air-conditioned holiday home is composed of 2 separate
+                bedrooms, a fully equipped kitchen with an oven and a microwave,
+                and 2 bathrooms.
+              </li>
+              <li>Towels and bed linen are featured in the holiday home.</li>
+              <li>
+                For added privacy, the accommodation features a
+                private entrance.
+              </li>
+            </ul>
+          </div>
+          <div class="hotelsOffers">
+            <div class="hotelsOffersBox1">
+              <div class="hotelsOffersPrice">15599</div>
+              <div class="hotelsOffersRating">
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+              </div>
+              <div class="hotelsOffersLastUpdated">Last updated 30 may 23</div>
+            </div>
+            <div class="hotelsOffersBox2">
+              <button class="bookNow">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hotelsSectionBodyContentBox hotelsSectionBodyContentBox7">
+          <div class="hotelsImgBox">
+            <img
+              src="https://i.ibb.co/vC5K7Nt/Santorini1.webp"
+              alt="Santorini1"
+              border="0" />
+          </div>
+          <div class="hotelsDetails">
+            <div class="hotelsDetailsHeader">Hotel Gorizia a La Valigia</div>
+            <ul>
+              <li>
+                A ferry port leading to the mainland can be reached within 10
+                km.
+              </li>
+              <li>
+                Guests staying at Hotel Santellini have a reception is open from
+                08:00-23:00, a garden, a terrace and a shared lounge at their
+                disposal.
+              </li>
+              <li>
+                Each unit here comprises a balcony with a view of the garden. A
+                flat-screen TV, a safe and a fridge are provided as well.
+              </li>
+            </ul>
+          </div>
+          <div class="hotelsOffers">
+            <div class="hotelsOffersBox1">
+              <div class="hotelsOffersPrice">13899</div>
+              <div class="hotelsOffersRating">
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+              </div>
+              <div class="hotelsOffersLastUpdated">Last updated 15 nov 23</div>
+            </div>
+            <div class="hotelsOffersBox2">
+              <button class="bookNow">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="hotelsSectionBodyContentBox hotelsSectionBodyContentBox8">
+          <div class="hotelsImgBox">
+            <img
+              src="https://i.ibb.co/SVm8vCM/Great-barrier-reef1.webp"
+              alt="Great-barrier-reef1"
+              border="0" />
+          </div>
+          <div class="hotelsDetails">
+            <div class="hotelsDetailsHeader">Pullman Reef Hotel Casino</div>
+            <ul>
+              <li>
+                fantastic property in truly breathtakingly beautiful
+                surroundings.
+              </li>
+              <li>
+                Lovely, comfortable colonial luxury rooms in a beautiful
+                tropical garden setting in the heart of Palm Cove across the
+                road from the beach.
+              </li>
+              <li>
+                Fantastic pools, great bar, AWESOME restaurant and amazing staff
+                who are friendly, efficient and helpful.
+              </li>
+            </ul>
+          </div>
+          <div class="hotelsOffers">
+            <div class="hotelsOffersBox1">
+              <div class="hotelsOffersPrice">23999</div>
+              <div class="hotelsOffersRating">
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+              </div>
+              <div class="hotelsOffersLastUpdated">Last updated 15 jan 23</div>
+            </div>
+            <div class="hotelsOffersBox2">
+              <button class="bookNow">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="hotelsSectionBodyContentBox hotelsSectionBodyContentBox9">
+          <div class="hotelsImgBox">
+            <img
+              src="https://i.ibb.co/Jj48hDX/Venice1.jpg"
+              alt="Venice1"
+              border="0" />
+          </div>
+          <div class="hotelsDetails">
+            <div class="hotelsDetailsHeader">Mirage Whitsundays</div>
+            <ul>
+              <li>
+                Free parking and At reception, you can book restaurants and
+                theatre tickets.
+              </li>
+              <li>
+                This hotel has an elegant interior design with Murano glass
+                lamps and antique furniture. All air-conditioned, rooms come
+                with satellite TV, a minibar and a private bathroom with
+                hairdryer.
+              </li>
+              <li>
+                An American breakfast is available each morning, and Bar Carlton
+                Café provides drinks plus snacks throughout the day
+              </li>
+            </ul>
+          </div>
+          <div class="hotelsOffers">
+            <div class="hotelsOffersBox1">
+              <div class="hotelsOffersPrice">20999</div>
+              <div class="hotelsOffersRating">
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+                <img
+                  src="https://i.ibb.co/RS5jzq5/star.jpg"
+                  alt="star"
+                  border="0" />
+              </div>
+              <div class="hotelsOffersLastUpdated">Last updated 19 feb 23</div>
+            </div>
+            <div class="hotelsOffersBox2">
+              <button class="bookNow">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section8">
+      <a href="#section1Top"> <div class="section8GotoTop">GoTo Top</div></a>
+      <div class="section8_In">
+        <div class="section8Content">
+          "Connect with us on social media for exclusive travel tips, deals, and
+          inspiration! Follow us on Facebook, Instagram, and Twitter. Join our
+          newsletter to stay updated on the latest travel trends and destination
+          highlights. Let's make memories together!"
+        </div>
+        <div class="section8FooterLinks">
+          <div class="section8FooterLinks1">
+            "Explore, Dream, Discover - Your Adventure Awaits! © 2024
+            EasyTripWay. All rights reserved".
+          </div>
+          <div class="section8FooterLinks2">
+            Terms of Service | Privacy Policy |
+            <a href="contactUs.html">Contact Us</a>.
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script>
+    var BookNow = document.querySelectorAll(".bookNow");
+
+    BookNow.forEach(function (button) {
+      button.addEventListener("click", function () {
+        alert("Booked Successfully");
+      });
+    });
+  </script>
+
+  <script src="toggle.js"></script>
+</html>

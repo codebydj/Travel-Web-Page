@@ -1,0 +1,275 @@
+/* Media query for tablets */
+@media (min-width: 800px) and (max-width: 1283px) {
+  /* section 1 */
+  .section1Logo > img {
+    width: 50px;
+  }
+  .menu-toggle > img{
+    display: flex;
+  }
+  .section1Menu {
+    display: none;
+  }
+  .section1Menu > a {
+    font-size: 0.8em;
+  }
+  .section1B {
+    margin-top: 0;
+  }
+  .svgImg {
+    width: 900px;
+  }
+  .section1BAA {
+    top: -900px;
+  }
+  .section1BAA > img {
+    width: 250px;
+  }
+  .section1BAAA {
+    font-size: 2em;
+  }
+
+  /* section4 */
+  .section4A {
+    margin-top: 0%;
+  }
+  .section4B {
+    left: 0;
+  }
+  .section4BA {
+    width: 300px;
+  }
+  .section4BAA {
+    font-size: 1.8em;
+  }
+  .section4BB > img {
+    width: 350px;
+  }
+
+  /* section 5 */
+  .section5A {
+    font-size: 1.6em;
+  }
+  .section5C > .section5CA > input {
+    width: 250px;
+    font-size: 0.8em;
+  }
+  .section5CB {
+    width: 150px;
+    font-size: 0.81em;
+  }
+
+  /* section6 */
+  .section6A {
+    margin-top: 0%;
+  }
+  .section6B {
+    left: 50px;
+    top: -600px;
+  }
+  .section6BA {
+    width: 300px;
+  }
+  .section6BAA {
+    font-size: 1.8em;
+  }
+  .section6BB {
+    top: -400px;
+  }
+  .section6BB > img {
+    width: 200px;
+    height: 200px;
+  }
+  /* section 7 */
+  .section7AA {
+    font-size: 1.8em;
+  }
+  .section7B_In > div {
+    height: 300px;
+    width: 300px;
+  }
+  .section7B_In > div:last-child {
+    display: none;
+  }
+  .section7BoxTitle {
+    font-size: 1.3em;
+  }
+}
+
+/* Media query for phones */
+@media (max-width: 800px) {
+  /* section 1 */
+  .section1Logo > img {
+    width: 50px;
+  }
+  .section1Menu {
+    display: none;
+  }
+  .menu-toggle{
+    right: 50px;
+  }
+  .menu-toggle > img{
+    display: flex;
+  }
+  .menuList{
+    width: 170px;
+  }
+  .section1Menu > a {
+    font-size: 0.8em;
+  }
+  .section1B {
+    margin-top: 0;
+    position: relative;
+    left: -50px;
+  }
+  .svgImg {
+    width: 700px;
+  }
+  .section1BAA {
+    top: -650px;
+    width: 200px;
+  }
+  .section1BAA > img {
+    width: 150px;
+    top: 80px;
+    left: 90px;
+  }
+  .section1BAAA {
+    font-size: 1.3em;
+  }
+  .section1BAAB {
+    font-size: 0.9em;
+  }
+
+  /* section2 */
+  .section2A {
+    font-size: 1.3em;
+  }
+  .section2B_In {
+    gap: 20px;
+    height: 300px;
+    width: 200px;
+    text-wrap: wrap;
+  }
+  .section2B_In > img {
+    width: 50px;
+  }
+  .section2B_In > .imgTitle {
+    font-size: 1em;
+  }
+  .section2B_In > .imgContent {
+    width: 100px;
+    font-size: 1em;
+    text-wrap: wrap;
+  }
+
+  /* section 3 */
+  .section3A {
+    font-size: 1.5em;
+  }
+  .section3Img {
+    width: 120px;
+  }
+  .section3BA_In > div {
+    width: 300px;
+  }
+  .imgContentHeader {
+    font-size: 1.3em;
+  }
+  .imgContentText {
+    font-size: 1em;
+  }
+  /* section 4 */
+  .section4A {
+    margin: 0;
+  }
+  .svg2 {
+    width: 720px;
+  }
+  .section4B {
+    top: -350px;
+    left: 0px;
+  }
+  .section4BA {
+    width: 300px;
+  }
+  .section4BAA {
+    font-size: 1.3em;
+  }
+  .section4BAB {
+    font-size: 1em;
+  }
+  .section4BB {
+    top: -350px;
+    left: 100px;
+  }
+  .section4BB > img {
+    width: 200px;
+  }
+  /* section 5 */
+  .section5 {
+    gap: 30px;
+  }
+  .section5A {
+    font-size: 1.6em;
+  }
+  .section5B {
+    font-size: 1.2em;
+  }
+  .section5C > .section5CA > input {
+    width: 200px;
+    height: 45px;
+    font-size: 0.8em;
+  }
+  .section5CB {
+    width: 100px;
+    height: 40px;
+    font-size: 0.71em;
+  }
+
+  /* section 6 */
+  .section6A {
+    margin-top: 0%;
+  }
+  .section6B {
+    left: 50px;
+    top: -400px;
+  }
+  .section6BA {
+    width: 300px;
+  }
+  .section6BAA {
+    font-size: 1.8em;
+  }
+  .section6BB {
+    top: -400px;
+    left: 60px;
+  }
+  .section6BB > img {
+    width: 200px;
+    height: 200px;
+  }
+  /* section7 */
+  .section7 {
+    margin-top: 0px;
+    height: fit-content;
+    gap: 0;
+  }
+  .section7AA {
+    font-size: 1.8em;
+  }
+  .section7B > div:last-child {
+    display: none;
+  }
+  .section7B_In {
+    gap: 40px;
+  }
+  .section7B_In > div {
+    height: 250px;
+    width: 200px;
+    gap: 0;
+  }
+  .section7BoxTitle {
+    font-size: 0.71em;
+  }
+}

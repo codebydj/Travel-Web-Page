@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>packages</title>
+    <link
+      rel="shortcut icon"
+      href="https://i.ibb.co/QC2bSGJ/travel-logo-design.jpg"
+      type="image/x-icon" />
+    <link rel="stylesheet" href="menuFooter.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <style>
+      * {
+        padding: 0%;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(207, 207, 207);
+      }
+      .section1Menu > a {
+        border-radius: 5px;
+      }
+      .section1Menu > a:hover {
+        color: white;
+        background-color: #478ac9;
+        transition: 0.2s linear;
+      }
+      .section2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 40px;
+      }
+      .section2Box {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .section2Box > div {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 500px;
+        width: 340px;
+        box-shadow: 15px 14px 16px 5px #ababab;
+        border-radius: 10px;
+        gap: 10px;
+        background-color: aliceblue;
+      }
+      .section2Box > div > div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .section2Box > div > div > img {
+        width: 290px;
+      }
+      .titleCost {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .name {
+        width: 170px;
+        text-align: start;
+        text-wrap: balance;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-weight: 600;
+        font-size: 1.4em;
+      }
+      .price {
+        font-size: 1.3em;
+        font-weight: 700;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .content {
+        font-size: 1.1em;
+        word-spacing: 6px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .content::first-letter {
+        padding-left: 25px;
+      }
+      .bookNow {
+        background-color: #3791e5;
+        padding: 10px;
+        border-radius: 9px;
+        font-size: 1.4em;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: white;
+        cursor: pointer;
+      }
+      .bookNow:hover {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section section1 showAnimate" id="section1Top">
+      <div class="section1_In section1A">
+        <div class="section1A_In section1Logo">
+          <img
+            src="https://i.ibb.co/QC2bSGJ/travel-logo-design.jpg"
+            alt="travel-logo-design"
+            border="0"
+            draggable="false" />
+        </div>
+        <div class="section1A_In section1Menu" id="Menu1">
+          <a href="index.html">home</a>
+          <a href="packages.html">package</a>
+          <a href="hotels.html">hotels</a>
+          <a href="gallery.html">gallery</a>
+          <a href="contactUs.html">contact us</a>
+          <a href="AboutUs.html">about us</a>
+        </div>
+      </div>
+      <div class="menu-toggle" id="Menu2">
+        <img
+          src="https://i.ibb.co/f0qdNB1/134216-menu-lines-hamburger-icon.png"
+          alt="134216-menu-lines-hamburger-icon"
+          border="0"
+          id="menuToggleImg"
+          onclick="toggleVisibility()" />
+        <div class="menuList listHidden" id="toggleElement">
+          <a href="index.html">home</a>
+          <a href="packages.html">package</a>
+          <a href="hotels.html">hotels</a>
+          <a href="gallery.html">gallery</a>
+          <a href="contactUs.html">contact us</a>
+          <a href="AboutUs.html">about us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section2">
+      <div class="section2Box section2Box1">
+        <!-- Box 1 no need to change -->
+        <div class="section2_In">
+          <div>
+            <img
+              src="https://i.ibb.co/gFSNQM7/peru.jpg"
+              alt="peru"
+              border="0" />
+            <div class="titleCost">
+              <div class="name">1.Manchu Picchu,Peru</div>
+              <div class="price">₹69,900</div>
+            </div>
+            <div class="content">
+              it is the most familiar icon of the Inca Empire.Machu Picchu, the
+              royal retreat of the Incan emperor Pachacuti, sits atop the
+              Urubamba Valley in Peru.
+            </div>
+          </div>
+          <div class="bookNow">Book Now</div>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="section2_In">
+          <div>
+            <img
+              src="https://i.ibb.co/s3x2TSF/grand-canyon1.jpg"
+              alt="canyon"
+              border="0" />
+            <div class="titleCost">
+              <div class="name">2.Grand Canyon</div>
+              <div class="price">₹35,900</div>
+            </div>
+            <div class="content">
+              The Grand Canyon offers one of the most visible examples of a
+              worldwide geological phenomenon known as the Great Unconformity,
+              in which 250 million-year-old rock strata.
+            </div>
+          </div>
+
+          <div class="bookNow">Book Now</div>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="section2_In">
+          <div>
+            <img
+              src="https://i.ibb.co/PDKrHWJ/iguaze-falls1.jpg"
+              alt="iguaze-falls"
+              border="0" />
+            <div class="titleCost">
+              <div class="name">3.iguaze-falls</div>
+              <div class="price">₹36,799</div>
+            </div>
+            <div class="content">
+              The Iguazu River rises near the heart of the city of Curitiba.The
+              river flows through Brazil; however, most of the falls are on the
+              Argentine side.
+            </div>
+          </div>
+          <div class="bookNow">Book Now</div>
+        </div>
+      </div>
+
+      <div class="section2Box section2Box2">
+        <!-- box 4 -->
+        <div class="section2_In">
+          <div>
+            <img
+              src="https://i.ibb.co/fS7TsrG/kyoto1.jpg"
+              alt="kyoto"
+              border="0" />
+            <div class="titleCost">
+              <div class="name">4.Kyoto</div>
+              <div class="price">₹82,299</div>
+            </div>
+            <div class="content">
+              Kyoto is mainly famous for its hundreds of temples and shrines. In
+              total, there are over 1,600 Buddhist temples and 400 Shinto
+              shrines.There are two main religions Shinto and Buddhism.
+            </div>
+          </div>
+          <div class="bookNow">Book Now</div>
+        </div>
+        <!-- box 5 -->
+        <div class="section2_In">
+          <div>
+            <img
+              src="https://i.ibb.co/R3n90H9/marrakech1.jpg"
+              alt="peru"
+              border="0" />
+            <div class="titleCost">
+              <div class="name">5.Marrakech</div>
+              <div class="price">₹45,900</div>
+            </div>
+            <div class="content">
+              Renowned for its balmy winter climate, exotic flowering plants,
+              orange and olive groves and rich culinary heritage in which spices
+              and local herbs play a large part.
+            </div>
+          </div>
+          <div class="bookNow">Book Now</div>
+        </div>
+        <!-- box 6 -->
+        <div class="section2_In">
+          <div>
+            <img
+              src="https://i.ibb.co/xscC0qn/safari1.jpg"
+              alt="safari"
+              border="0" />
+            <div class="titleCost">
+              <div class="name">6.Safari</div>
+              <div class="price">₹75,999</div>
+            </div>
+            <div class="content">
+              Safari tourism is one of the most effective ways to educate people
+              about nature, the natural habitat, and most importantly, the
+              conservation of wildlife in general.
+            </div>
+          </div>
+          <div class="bookNow">Book Now</div>
+        </div>
+      </div>
+
+      <div class="section2Box section2Box3">
+        <!-- box 7 -->
+        <div class="section2_In">
+          <div>
+            <img
+              src="https://i.ibb.co/TgdPynK/santorini-greece2.jpg"
+              alt="santorini-greece2"
+              border="0" />
+            <div class="titleCost">
+              <div class="name">7.Santorini</div>
+              <div class="price">₹59,900</div>
+            </div>
+            <div class="content">
+              Santorini is a small island located in the Cyclades group of
+              islands.It is famous for its stunning natural beauty, including
+              its white-washed buildings.
+            </div>
+          </div>
+          <div class="bookNow">Book Now</div>
+        </div>
+        <!-- box 8 -->
+        <div class="section2_In">
+          <div>
+            <img
+              src="https://i.ibb.co/vq08zKn/the-great-barrier-reef1.jpg"
+              alt="the-great-barrier-reef"
+              border="0" />
+            <div class="titleCost">
+              <div class="name">8.Great barrier reef</div>
+              <div class="price">₹76,900</div>
+            </div>
+            <div class="content">
+              The Great Barrier Reef is a beauty on the north-east coast of
+              Australia and contains the world's largest collection of coral
+              reefs.
+            </div>
+          </div>
+          <div class="bookNow">Book Now</div>
+        </div>
+        <!-- box 9 -->
+        <div class="section2_In">
+          <div>
+            <img
+              src="https://i.ibb.co/0jtbskk/venice2.jpg"
+              alt="venice"
+              border="0" />
+            <div class="titleCost">
+              <div class="name">9.Venice</div>
+              <div class="price">₹97,900</div>
+            </div>
+            <div class="content">
+              Venice, the capital of northern Italy’s Veneto region, is built on
+              more than 100 small islands in a lagoon in the Adriatic Sea. It
+              has no roads, just canals including the Grand Canal thoroughfare
+              lined with Renaissance and Gothic palaces.
+            </div>
+          </div>
+          <div class="bookNow">Book Now</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section8">
+      <a href="#section1Top"> <div class="section8GotoTop">GoTo Top</div></a>
+      <div class="section8_In">
+        <div class="section8Content">
+          "Connect with us on social media for exclusive travel tips, deals, and
+          inspiration! Follow us on Facebook, Instagram, and Twitter. Join our
+          newsletter to stay updated on the latest travel trends and destination
+          highlights. Let's make memories together!"
+        </div>
+        <div class="section8FooterLinks">
+          <div class="section8FooterLinks1">
+            "Explore, Dream, Discover - Your Adventure Awaits! © 2024
+            EasyTripWay. All rights reserved".
+          </div>
+          <div class="section8FooterLinks2">
+            Terms of Service | Privacy Policy |
+            <a href="contactUs.html">Contact Us</a>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      var BookNow = document.querySelectorAll(".bookNow");
+
+      BookNow.forEach(function (button) {
+        button.addEventListener("click", function () {
+          alert("Booked Successfully");
+        });
+      });
+    </script>
+    <script src="toggle.js"></script>
+  </body>
+</html>

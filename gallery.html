@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link
+      rel="shortcut icon"
+      href="https://i.ibb.co/QC2bSGJ/travel-logo-design.jpg"
+      type="image/x-icon" />
+    <link rel="stylesheet" href="menuFooter.css" />
+    <link rel="stylesheet" href="responsive.css" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .section1Menu > a {
+        border-radius: 5px;
+      }
+      .section1Menu > a:hover {
+        color: white;
+        background-color: #478ac9;
+        transition: 0.2s linear;
+      }
+      .gallerySection {
+        padding: 20px;
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .galleryHeader {
+        text-align: center;
+        letter-spacing: 2px;
+        word-spacing: 25px;
+        font-size: 2.3em;
+        text-transform: capitalize;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        border-bottom: 3px solid #5959596c;
+      }
+      .imageGallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 10px;
+      }
+      .imageGallery > div {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .imageGallery > div:nth-child(2) {
+        width: 28%;
+      }
+      .imageGallery > div:nth-child(3) {
+        width: 31%;
+      }
+      .imageGallery > div > img {
+        border-radius: 20px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section section1 showAnimate" id="section1Top">
+      <div class="section1_In section1A">
+        <div class="section1A_In section1Logo">
+          <img
+            src="https://i.ibb.co/QC2bSGJ/travel-logo-design.jpg"
+            alt="travel-logo-design"
+            border="0"
+            draggable="false" />
+        </div>
+        <div class="section1A_In section1Menu" id="Menu1">
+          <a href="index.html">home</a>
+          <a href="packages.html">package</a>
+          <a href="hotels.html">hotels</a>
+          <a href="gallery.html">gallery</a>
+          <a href="contactUs.html">contact us</a>
+          <a href="AboutUs.html">about us</a>
+        </div>
+      </div>
+      <div class="menu-toggle" id="Menu2">
+        <img
+          src="https://i.ibb.co/f0qdNB1/134216-menu-lines-hamburger-icon.png"
+          alt="134216-menu-lines-hamburger-icon"
+          border="0"
+          id="menuToggleImg"
+          onclick="toggleVisibility()" />
+        <div class="menuList listHidden" id="toggleElement">
+          <a href="index.html">home</a>
+          <a href="packages.html">package</a>
+          <a href="hotels.html">hotels</a>
+          <a href="gallery.html">gallery</a>
+          <a href="contactUs.html">contact us</a>
+          <a href="AboutUs.html">about us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallerySection">
+      <div class="galleryHeader">Photo gallery</div>
+      <div class="imageGallery">
+        <div class="imageGalleryRow1">
+          <img src="https://i.ibb.co/rZvLDCH/img1.jpg" alt="img1" />
+          <img src="https://i.ibb.co/ZHS1tvG/img2.jpg" alt="img2" />
+          <img src="https://i.ibb.co/dD9b5DZ/img3.jpg" alt="img3" />
+          <img src="https://i.ibb.co/qRNtk9L/img4.jpg" alt="img4" />
+          <img src="https://i.ibb.co/L1hVfhX/img5.jpg" alt="img5" />
+          <img src="https://i.ibb.co/5kt0bVp/img6.jpg" alt="img6" />
+        </div>
+        <div class="imageGalleryRow2">
+          <img src="https://i.ibb.co/18jQSVJ/img7.jpg" alt="img7" />
+          <img src="https://i.ibb.co/YDhndby/img8.jpg" alt="img8" />
+          <img src="https://i.ibb.co/xJtHDJb/img9.jpg" alt="img9" />
+          <img src="https://i.ibb.co/n0TxgP9/img10.jpg" alt="img10" />
+          <img src="https://i.ibb.co/0QxWRrC/img11.jpg" alt="img11" />
+          <img src="https://i.ibb.co/RzGKmRc/img12.jpg" alt="img12" />
+        </div>
+        <div class="imageGalleryRow3">
+          <img src="https://i.ibb.co/pz2PRfs/img13.jpg" alt="img13" />
+          <img src="https://i.ibb.co/bBP8JCs/img14.jpg" alt="img14" />
+          <img src="https://i.ibb.co/wdZGqhy/img15.jpg" alt="img15" />
+          <img src="https://i.ibb.co/VxTkbR9/img16.jpg" alt="img16" />
+          <img src="https://i.ibb.co/wdY1H0G/img17.jpg" alt="img17" />
+          <img src="https://i.ibb.co/pwxcYfK/img18.jpg" alt="img18" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section section8">
+      <a href="#section1Top"> <div class="section8GotoTop">GoTo Top</div></a>
+      <div class="section8_In">
+        <div class="section8Content">
+          "Connect with us on social media for exclusive travel tips, deals, and
+          inspiration! Follow us on Facebook, Instagram, and Twitter. Join our
+          newsletter to stay updated on the latest travel trends and destination
+          highlights. Let's make memories together!"
+        </div>
+        <div class="section8FooterLinks">
+          <div class="section8FooterLinks1">
+            "Explore, Dream, Discover - Your Adventure Awaits! © 2024
+            EasyTripWay. All rights reserved".
+          </div>
+          <div class="section8FooterLinks2">
+            Terms of Service | Privacy Policy |
+            <a href="contactUs.html">Contact Us</a>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="toggle.js"></script>
+  </body>
+</html>
